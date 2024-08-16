@@ -504,13 +504,7 @@ class _ProfileWidgetState extends State<ProfileWidget> {
                                               .showSnackBar(
                                             SnackBar(
                                               content: Text(
-                                                valueOrDefault<String>(
-                                                  DashboardCall.namecustomer(
-                                                    columnDashboardResponse
-                                                        .jsonBody,
-                                                  ),
-                                                  'namecustomer',
-                                                ),
+                                                'Anda Berhasil Keluar',
                                                 style: TextStyle(
                                                   color: FlutterFlowTheme.of(
                                                           context)
