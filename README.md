@@ -1,4 +1,4 @@
-# BANK SAMPAH DIGITAL CUSTOMER
+# BANK SAMPAH CUSTOMER
 
 A new Flutter project.
 

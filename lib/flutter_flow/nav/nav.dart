@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '/index.dart';
-import '/main.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 
 export 'package:go_router/go_router.dart';
@@ -30,75 +29,17 @@ GoRouter createRouter(AppStateNotifier appStateNotifier) => GoRouter(
       initialLocation: '/',
       debugLogDiagnostics: true,
       refreshListenable: appStateNotifier,
-      errorBuilder: (context, state) => const LoginpageWidget(),
+      errorBuilder: (context, state) => const HomePageWidget(),
       routes: [
         FFRoute(
           name: '_initialize',
           path: '/',
-          builder: (context, _) => const LoginpageWidget(),
+          builder: (context, _) => const HomePageWidget(),
         ),
         FFRoute(
-          name: 'loginpage',
-          path: '/loginpage',
-          builder: (context, params) => const LoginpageWidget(),
-        ),
-        FFRoute(
-          name: 'registerpage',
-          path: '/registerpage',
-          builder: (context, params) => const RegisterpageWidget(),
-        ),
-        FFRoute(
-          name: 'home',
-          path: '/home',
-          builder: (context, params) =>
-              params.isEmpty ? const NavBarPage(initialPage: 'home') : const HomeWidget(),
-        ),
-        FFRoute(
-          name: 'history',
-          path: '/history',
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'history')
-              : const NavBarPage(
-                  initialPage: 'history',
-                  page: HistoryWidget(),
-                ),
-        ),
-        FFRoute(
-          name: 'profile',
-          path: '/profile',
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'profile')
-              : const NavBarPage(
-                  initialPage: 'profile',
-                  page: ProfileWidget(),
-                ),
-        ),
-        FFRoute(
-          name: 'jadwaljemput',
-          path: '/jadwaljemput',
-          builder: (context, params) => const JadwaljemputWidget(),
-        ),
-        FFRoute(
-          name: 'detail',
-          path: '/detail',
-          builder: (context, params) => const DetailWidget(),
-        ),
-        FFRoute(
-          name: 'lupapassword',
-          path: '/lupapassword',
-          builder: (context, params) => const LupapasswordWidget(),
-        ),
-        FFRoute(
-          name: 'webview',
-          path: '/webview',
-          builder: (context, params) => params.isEmpty
-              ? const NavBarPage(initialPage: 'webview')
-              : const WebviewWidget(),
-        ),
-        FFRoute(
-          name: 'historydetail',
-          path: '/historydetail',
-          builder: (context, params) => const HistorydetailWidget(),
+          name: 'HomePage',
+          path: '/homePage',
+          builder: (context, params) => const HomePageWidget(),
         )
       ].map((r) => r.toRoute(appStateNotifier)).toList(),
     );
